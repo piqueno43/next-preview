@@ -1,0 +1,10 @@
+fragment Post on Post {
+  id
+  title
+  excerpt(format: RENDERED)
+  content(format: RENDERED)
+  slug
+  date
+  modified
+  uri
+}

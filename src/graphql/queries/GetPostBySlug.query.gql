@@ -1,0 +1,33 @@
+query GetPostBySlug($slug: ID!, $asPreview: Boolean!) {
+  post(id: $slug, idType: SLUG, asPreview: $asPreview) {
+    ...Post
+    ...FeatureImage
+    author {
+      node {
+        name
+        slug
+        avatar {
+          url
+        }
+      }
+    }
+    tags {
+      edges {
+        node {
+          id
+          name
+          slug
+        }
+      }
+    }
+    categories {
+      edges {
+        node {
+          id
+          name
+          slug
+        }
+      }
+    }
+  }
+}

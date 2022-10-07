@@ -1,0 +1,8 @@
+fragment FeatureImage on Post {
+  featuredImage {
+    node {
+      altText
+      sourceUrl
+    }
+  }
+}

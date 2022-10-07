@@ -1,0 +1,29 @@
+query GetAllPosts {
+  categories {
+    edges {
+      node {
+        id
+        name
+        slug
+        description
+      }
+    }
+  }
+  tags {
+    edges {
+      node {
+        id
+        name
+        slug
+      }
+    }
+  }
+  posts {
+    edges {
+      node {
+        ...Post
+        ...FeatureImage
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+mutation Login($username: String!, $password: String!) {
+  login(
+    input: {
+      clientMutationId: "login-preview"
+      username: $username
+      password: $password
+    }
+  ) {
+    authToken
+    refreshToken
+    user {
+      firstName
+      lastName
+      jwtAuthExpiration
+    }
+  }
+}

@@ -1,0 +1,6 @@
+query GetUserByID($username: ID!) {
+  user(id: $username, idType: DATABASE_ID) {
+    lastName
+    firstName
+  }
+}

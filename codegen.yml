@@ -1,0 +1,18 @@
+overwrite: true
+# Trocar se preciso para gerar os códigos
+schema: http://localhost:8080/graphql
+
+documents: './src/graphql/**/*.{gql,graphql}'
+
+generates:
+  ./src/graphql/generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      reactApolloVersion: 3
+      withHooks: true
+      withHOC: false
+      withComponents: false
+      
